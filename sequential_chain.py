@@ -21,6 +21,15 @@ parser = StrOutputParser()
 
 chain = prompt1 | model | parser | prompt2 | model | parser
 
+'''
+LangChain’s built-in Runnable pipeline operator |, which is syntactic sugar for chaining together components.
+
+This syntax supports automatic graph generation, parallel execution, structured tracing, and reusability.
+
+| works only with components that implement LangChain’s Runnable interface (PromptTemplate, ChatOpenAI, StrOutputParser, etc.).
+
+'''
+
 result = chain.invoke({'topic': 'Unemployment in India'})
 
 print(result)
