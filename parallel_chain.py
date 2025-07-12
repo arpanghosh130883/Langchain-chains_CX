@@ -1,5 +1,5 @@
 from langchain_openai import ChatOpenAI
-from langchain_anthropic import ChatAnthropic
+#from langchain_anthropic import ChatAnthropic
 from dotenv import load_dotenv
 from langchain_core.prompts import PromptTemplate
 from langchain_core.output_parsers import StrOutputParser
@@ -9,7 +9,9 @@ load_dotenv()
 
 model1 = ChatOpenAI()
 
-model2 = ChatAnthropic(model_name='claude-3-7-sonnet-20250219')
+# model2 = ChatAnthropic(model_name='claude-3-7-sonnet-20250219')
+
+model2 = ChatOpenAI()
 
 prompt1 = PromptTemplate(
     template='Generate short and simple notes from the following text \n {text}',
