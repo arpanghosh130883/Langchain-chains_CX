@@ -5,9 +5,12 @@ SequentialChain — More Flexible, Supports Multiple Variables
 You want to pass multiple named variables between chains (more structured workflow).
 '''
 
-from langchain.chains import LLMChain, SequentialChain
-
+from langchain.cahins import LLMChain, SimpleSequentialChain
+from langchain_core.prompts import PromptTemplate
 from langchain.llms import OpenAI
+from dotenv import load_dotenv
+
+load_dotenv()
 
 llm = OpenAI(temperature=0.7)
 
