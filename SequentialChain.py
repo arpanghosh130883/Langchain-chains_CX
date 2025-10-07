@@ -5,10 +5,11 @@ SequentialChain — More Flexible, Supports Multiple Variables
 You want to pass multiple named variables between chains (more structured workflow).
 '''
 
-from langchain import LLMChain, SequentialChain, PromptTemplate
+from langchain.chains import LLMChain, SequentialChain
+
 from langchain.llms import OpenAI
 
-llm = OpenAI(model_name="text-davinci-003", temperature=0.7)
+llm = OpenAI(temperature=0.7)
 
 # Step 1 → Generate a company name
 prompt1 = PromptTemplate(
