@@ -12,6 +12,9 @@ Each chain outputs a string
 from langchain.cahins import LLMChain, SimpleSequentialChain
 from langchain_core.prompts import PromptTemplate
 from langchain.llms import OpenAI
+from dotenv import load_dotenv
+
+load_dotenv()
 
 # Initialize model
 llm = OpenAI(temperature=0.7)
