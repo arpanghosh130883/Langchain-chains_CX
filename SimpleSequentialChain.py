@@ -9,11 +9,12 @@ Each chain takes a single input string
 Each chain outputs a string
 '''
 
-from langchain import LLMChain, SimpleSequentialChain, PromptTemplate
+from langchain.cahins import LLMChain, SimpleSequentialChain
+from langchain_core.prompts import PromptTemplate
 from langchain.llms import OpenAI
 
 # Initialize model
-llm = OpenAI(model_name="text-davinci-003", temperature=0.7)
+llm = OpenAI(temperature=0.7)
 
 # Chain 1 → Generate an idea
 prompt1 = PromptTemplate.from_template("Give me an interesting startup idea about {topic}.")
